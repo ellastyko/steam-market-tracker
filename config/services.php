@@ -15,10 +15,10 @@ return [
     */
 
     'mailgun' => [
-        'domain' => env('MAILGUN_DOMAIN'),
-        'secret' => env('MAILGUN_SECRET'),
+        'domain'   => env('MAILGUN_DOMAIN'),
+        'secret'   => env('MAILGUN_SECRET'),
         'endpoint' => env('MAILGUN_ENDPOINT', 'api.mailgun.net'),
-        'scheme' => 'https',
+        'scheme'   => 'https',
     ],
 
     'postmark' => [
@@ -26,9 +26,20 @@ return [
     ],
 
     'ses' => [
-        'key' => env('AWS_ACCESS_KEY_ID'),
+        'key'    => env('AWS_ACCESS_KEY_ID'),
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    /**
+     * Steam
+     */
+    'steam' => [
+        'client_id'     => '49C8C76B9A02E9E9B0B3D2844C4FA2DE',
+        'client_secret' => env('STEAM_CLIENT_SECRET', '49C8C76B9A02E9E9B0B3D2844C4FA2DE'),
+        'redirect'      => env('STEAM_REDIRECT_URI', env('APP_URL').'auth/steam/callback'),
+        'allowed_hosts' => [
+            'localhost',
+        ]
+    ],
 ];
